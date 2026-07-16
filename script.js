@@ -245,4 +245,3 @@
 
   startBtn.addEventListener("click", handleStartClick);
 })();
-```
