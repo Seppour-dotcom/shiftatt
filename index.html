@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Shifting Attention Test</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="container">
+
+<h1>آزمون جابجایی توجه (Shifting Attention)</h1>
+
+<!-- ==================== Setup ==================== -->
+
+<div id="setup">
+
+<div class="row">
+
+<label>مدت آزمون</label>
+
+<select id="testDuration">
+
+<option value="30">30 ثانیه</option>
+<option value="45">45 ثانیه</option>
+<option value="60" selected>60 ثانیه</option>
+<option value="90">90 ثانیه</option>
+<option value="120">120 ثانیه</option>
+
+</select>
+
+</div>
+
+<div class="instructions">
+
+<p>
+در هر مرحله فقط یکی از دو کادر فعال است.
+</p>
+
+<p>
+اگر کادر بالا فعال باشد، بررسی کنید که
+<b>عدد زوج است یا خیر.</b>
+</p>
+
+<p>
+اگر کادر پایین فعال باشد، بررسی کنید که
+<b>حرف صدادار (A, E, I, O, U)</b>
+است یا خیر.
+</p>
+
+<p>
+
+برای پاسخ می‌توانید:
+
+</p>
+
+<ul>
+
+<li>دکمه <b>Yes</b> یا کلید <b>→</b></li>
+
+<li>دکمه <b>No</b> یا کلید <b>←</b></li>
+
+</ul>
+
+</div>
+
+<button id="startBtn">
+
+شروع آزمون
+
+</button>
+
+</div>
+
+<!-- ==================== Countdown ==================== -->
+
+<div id="countdown"></div>
+
+<!-- ==================== Status ==================== -->
+
+<div id="status">
+
+<div>
+
+زمان باقی‌مانده:
+
+<span id="timeLeft">
+
+00:00
+
+</span>
+
+</div>
+
+<div>
+
+Trial:
+
+<span id="trialNow">
+
+0
+
+</span>
+
+</div>
+
+</div>
+
+<!-- ==================== Main Task ==================== -->
+
+<div id="taskArea">
+
+<!-- Top Card -->
+
+<div class="question">
+
+آیا عدد زوج است؟
+
+</div>
+
+<div id="topCard" class="stimulusCard">
+
+<span id="topStimulus"></span>
+
+</div>
+
+<hr>
+
+<!-- Bottom Card -->
+
+<div id="bottomCard" class="stimulusCard">
+
+<span id="bottomStimulus"></span>
+
+</div>
+
+<div class="question">
+
+آیا حرف صدادار است؟
+
+</div>
+
+<!-- Response Buttons -->
+
+<div id="buttons">
+
+<button id="noBtn">
+
+No
+
+</button>
+
+<button id="yesBtn">
+
+Yes
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ==================== Results ==================== -->
+
+<div id="results"></div>
+
+</div>
+
+<script src="generator.js"></script>
+
+<script src="stats.js"></script>
+
+<script src="csv.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
