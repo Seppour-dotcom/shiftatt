@@ -1,0 +1,375 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Tahoma,sans-serif;
+    background:#f4f6f9;
+    color:#222;
+
+}
+
+#container{
+
+    width:min(900px,95%);
+    margin:30px auto;
+    text-align:center;
+
+}
+
+h1{
+
+    margin-bottom:25px;
+    color:#1b4f72;
+
+}
+
+/*==========================
+        SETUP
+==========================*/
+
+#setup{
+
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+
+}
+
+.row{
+
+    margin:20px 0;
+
+}
+
+label{
+
+    font-weight:bold;
+    display:block;
+    margin-bottom:10px;
+
+}
+
+select{
+
+    padding:10px 18px;
+    font-size:18px;
+    border-radius:8px;
+    border:1px solid #bbb;
+    cursor:pointer;
+
+}
+
+.instructions{
+
+    margin:25px auto;
+    text-align:right;
+    line-height:2;
+    max-width:650px;
+
+}
+
+.instructions ul{
+
+    margin-top:10px;
+    padding-right:25px;
+
+}
+
+#startBtn{
+
+    margin-top:20px;
+
+    background:#1976d2;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    padding:14px 35px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#startBtn:hover{
+
+    background:#0f5aa5;
+
+}
+
+/*==========================
+        COUNTDOWN
+==========================*/
+
+#countdown{
+
+    display:none;
+
+    font-size:90px;
+
+    font-weight:bold;
+
+    color:#1976d2;
+
+    margin:40px;
+
+}
+
+/*==========================
+        STATUS
+==========================*/
+
+#status{
+
+    display:none;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:20px auto;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/*==========================
+        TASK
+==========================*/
+
+#taskArea{
+
+    display:none;
+
+}
+
+.question{
+
+    font-size:26px;
+
+    margin:18px;
+
+    font-weight:bold;
+
+}
+
+/*==========================
+        CARDS
+==========================*/
+
+.stimulusCard{
+
+    width:380px;
+
+    height:220px;
+
+    margin:0 auto;
+
+    border-radius:25px;
+
+    background:#fdfdfd;
+
+    border:2px solid #d7d7d7;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:90px;
+
+    font-weight:bold;
+
+    color:#1572a1;
+
+    transition:.25s;
+
+    user-select:none;
+
+}
+
+/* کارت فعال */
+
+.active{
+
+    border:5px solid #1976d2;
+
+    background:white;
+
+    box-shadow:
+
+        0 0 30px rgba(25,118,210,.35);
+
+}
+
+/* کارت غیرفعال */
+
+.inactive{
+
+    opacity:.35;
+
+}
+
+/* فاصله بین دو کارت */
+
+hr{
+
+    width:65%;
+
+    margin:25px auto;
+
+    border:none;
+
+    border-top:3px solid #1976d2;
+
+}
+
+/*==========================
+        BUTTONS
+==========================*/
+
+#buttons{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+}
+
+#buttons button{
+
+    width:150px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    color:white;
+
+}
+
+#yesBtn{
+
+    background:#2e7d32;
+
+}
+
+#yesBtn:hover{
+
+    background:#226326;
+
+}
+
+#noBtn{
+
+    background:#c62828;
+
+}
+
+#noBtn:hover{
+
+    background:#991f1f;
+
+}
+
+/* هنگام کلیک */
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/*==========================
+        RESULTS
+==========================*/
+
+#results{
+
+    display:none;
+
+    margin-top:35px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+
+    text-align:right;
+
+    line-height:2;
+
+}
+
+/*==========================
+        RESPONSIVE
+==========================*/
+
+@media(max-width:700px){
+
+.stimulusCard{
+
+    width:90%;
+
+    height:180px;
+
+    font-size:70px;
+
+}
+
+.question{
+
+    font-size:22px;
+
+}
+
+#buttons button{
+
+    width:120px;
+
+    height:58px;
+
+    font-size:24px;
+
+}
+
+#status{
+
+    font-size:18px;
+
+}
+
+#countdown{
+
+    font-size:70px;
+
+}
+
+}
