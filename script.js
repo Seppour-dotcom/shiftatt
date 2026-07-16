@@ -1,4 +1,3 @@
-```javascript
 (function () {
   let testDuration = 60;
   let timeRemaining = 0;
